@@ -1,0 +1,204 @@
+/* General Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: rgb(0, 49, 65);
+  font-family: Arial, Helvetica, sans-serif;
+}
+input {
+  display: none;
+}
+/* page  */
+div.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(244, 243, 243);
+  min-height: 100vh;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+/* Card */
+div.page div.card {
+  width: 500px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  background-color: white;
+  box-shadow: 1px 1px 0.25rem 0px rgba(0 0 0 / 20%);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  margin: 1rem 0;
+}
+/* photo */
+div.page div.card div.image {
+  outline: 2px solid var(--main-color);
+  outline-offset: 0.3rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-image: url(avatar_hat.jpg);
+  background-size: cover;
+  background-position: center;
+}
+div.page div.card > div {
+  color: var(--main-color);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+div.page div.card > div label {
+  display: block;
+  width: 40px;
+  padding: 2px 2px;
+  background-color: var(--main-color);
+  align-self: flex-end;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+div.page div.card > div label:hover {
+  cursor: pointer;
+}
+div.page div.card > div label span {
+  display: block;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+input[id="toggle"]:checked ~ div.page div.card div {
+  color: white;
+}
+input[id="toggle"]:checked ~ div.page div.card div label {
+  background-color: white;
+}
+input[id="toggle"]:checked ~ div.page div.card div label span {
+  margin-left: 20px;
+  box-shadow: inset 6px -4px 0px 0px var(--main-color);
+}
+input[id="toggle"]:checked ~ div.page div.card {
+  background-color: var(--main-color);
+  box-shadow: 1px 1px 0.25rem 0px rgba(255, 255, 255, 0.2);
+}
+input[id="toggle"]:checked ~ div.page {
+  background-color: var(--main-color);
+}
+input[id="toggle"]:checked ~ div.page div.card div button {
+  background-color: #fff;
+  color: var(--main-color);
+}
+div.page div.card div h2,
+div.page div.card div h3 {
+  font-weight: lighter;
+  margin: 0.5rem 0;
+}
+div.page div.card div p {
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+div.page div.card div button {
+  margin: 0.5rem 0;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  letter-spacing: 0.1rem;
+  align-self: flex-start;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+div.page div.card div button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+div.page div.card div div.social {
+  align-self: flex-end;
+}
+div.page div.card div div.social i {
+  margin: 0 0.3rem;
+  opacity: 0.5;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+div.page div.card div div.social i:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+/* Media */
+@media screen and (max-width: 580px) {
+  div.page div.card {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
